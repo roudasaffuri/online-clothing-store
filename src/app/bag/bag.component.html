@@ -1,0 +1,24 @@
+<div style="margin: 40px; text-align: center;" *ngIf=" recordsService.shoppingBag.length  > 0">
+    <h3>Number of Items in Bag: {{ recordsService.shoppingBag.length }}</h3>
+</div>
+
+
+<div id="d1">
+    <div id="d2" *ngFor="let item of recordsService.shoppingBag; let i = index ">
+        <div>
+            <div>
+                <h3>Price : {{item.price}} </h3>
+            </div>
+            <div>
+                <h3>Size : {{item.size}} </h3>
+            </div>
+            <div> item added to cart</div>
+        </div>
+        <div>
+            <div id="a">
+                <img [src]="item.imageUrl" alt="image">
+            </div>
+        </div>
+    </div>
+
+</div>
